@@ -1,0 +1,30 @@
+{
+
+  "manifest_version": 2,
+  "name": "Ficord",
+  "version": "1.0",
+
+  "description": "Records user interactions as FICUS Steps",
+
+  "icons": {
+    "48": "icons/red-record-48.png"
+  },
+  
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/red-record-48.png"
+    }
+  },
+  
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.decc.local/*"],
+      "js": ["ficord.js"]
+    }
+  ]
+
+}
