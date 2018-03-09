@@ -3,6 +3,8 @@
   "manifest_version": 2,
   "name": "Ficord",
   "version": "1.0",
+  "author": "Harshid Dattani",
+  "homepage_url": "https://github.com/harshid86/Ficord",
 
   "description": "Records user interactions as FICUS Steps",
 
@@ -11,6 +13,8 @@
   },
   
   "browser_action": {
+    "browser_style": true,
+    "default_popup": "popup/record.html",
     "default_icon": {
       "48": "icons/red-record-48.png"
     }
@@ -19,6 +23,12 @@
   "background": {
     "scripts": ["background.js"]
   },
+  
+  "permissions": [
+      "<all_urls>"
+  ],
+  
+  "devtools_page": "devtools/devtools-page.html",
 
   "content_scripts": [
     {
