@@ -32,7 +32,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.decc.local/*"],
+      "matches": ["<all_urls>"],
       "js": ["ficord.js"]
     }
   ]
